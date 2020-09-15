@@ -15,7 +15,6 @@ public class WizardController {
     public String deleteWizard(@RequestParam Long id) {
 
         repository.deleteById(id);
-
         return "redirect:/wizards";
     }
 
@@ -23,7 +22,6 @@ public class WizardController {
     public String getAll(Model model) {
 
         model.addAttribute("wizards", repository.findAll());
-
         return "wizard_get_all";
     }
 }

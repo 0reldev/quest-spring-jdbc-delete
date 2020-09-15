@@ -15,7 +15,6 @@ public class SchoolController {
     public String deleteWizard(@RequestParam Long id) {
 
         repository.deleteById(id);
-
         return "redirect:/schools";
     }
 
@@ -23,7 +22,6 @@ public class SchoolController {
     public String getAll(Model model) {
 
         model.addAttribute("schools", repository.findAll());
-
         return "school_get_all";
     }
 }
